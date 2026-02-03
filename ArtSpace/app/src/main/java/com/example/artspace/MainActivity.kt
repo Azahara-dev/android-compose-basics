@@ -26,6 +26,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -68,23 +72,62 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
 
+        var actualArt by remember { mutableStateOf(1) }
+
         Spacer(modifier = Modifier.weight(1f))
 
-        ArtWall(
-            painterResource(R.drawable.los_girasoles)
+        when (actualArt) {
+            1 -> {
+                ArtWall(
+                    painterResource(R.drawable.los_girasoles)
+                )
+                Spacer(modifier = Modifier.weight(1f))
+                ArtDescription(
+                    stringResource(R.string.van_goh_art),
+                    stringResource(R.string.van_goh)
+                )
+            }
+
+            2 -> {
+                ArtWall(
+                    painterResource(R.drawable.la_dama_del_arminio)
+                )
+                Spacer(modifier = Modifier.weight(1f))
+                ArtDescription(
+                    stringResource(R.string.leonardo_da_vinci_art),
+                    stringResource(R.string.leonardo_da_vinci)
+                )
+            }
+
+            3 -> {
+                ArtWall(
+                    painterResource(R.drawable.mujer_con_sombrilla)
+                )
+                Spacer(modifier = Modifier.weight(1f))
+                ArtDescription(
+                    stringResource(R.string.claude_monet_art),
+                    stringResource(R.string.claude_monet)
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(24.dp))
+        RowButtons(
+            onPrevious = {
+                if (actualArt == 1) {
+                    actualArt = 3
+                } else {
+                    actualArt--
+                }
+            },
+            onNext = {
+                if (actualArt == 3) {
+                    actualArt = 1
+                } else {
+                    actualArt++
+                }
+            }
         )
-
-        Spacer(modifier = Modifier.weight(1f))
-
-
-            ArtDescription()
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            RowButtons()
-
     }
-
 }
 
 @Composable
@@ -96,23 +139,23 @@ fun ArtWall(art: Painter) {
             .shadow(elevation = 8.dp, RoundedCornerShape(24.dp))
             .clip(RoundedCornerShape(24.dp))
             .border(width = 4.dp, color = Color.Gray, shape = RoundedCornerShape(24.dp))
-            //.size(260.dp)
+        //.size(260.dp)
     )
 }
 
 @Composable
-fun ArtDescription() {
+fun ArtDescription(title: String, artist: String) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
-            text = "Art Title",
+            text = title,
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium,
             textAlign = TextAlign.Center
         )
         Text(
-            text = "Artist, Año",
+            text = artist,
             fontSize = 14.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -120,14 +163,16 @@ fun ArtDescription() {
 }
 
 @Composable
-fun RowButtons(modifier: Modifier = Modifier) {
+fun RowButtons(
+    onPrevious: () -> Unit,
+    onNext: () -> Unit
+) {
     Row(
         horizontalArrangement = Arrangement.SpaceEvenly,
-        modifier = modifier
-            .fillMaxWidth()
+        modifier = Modifier.fillMaxWidth()
     ) {
-        RoundedButton("Previous") { /*TODO*/ }
-        RoundedButton("Next") { /*TODO*/ }
+        RoundedButton("Previous", onPrevious)
+        RoundedButton("Next", onNext)
     }
 }
 

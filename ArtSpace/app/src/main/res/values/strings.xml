@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Art Space</string>
+
+    <string name="van_goh_art">Los girasoles, 1888</string>
+    <string name="van_goh">Van Gogh (1853-1890)</string>
+
+    <string name="leonardo_da_vinci_art">La dama del armiño, 1490</string>
+    <string name="leonardo_da_vinci">Leonardo Da Vinci (1452-1519)</string>
+
+    <string name="claude_monet_art">Mujer con sombrilla, 1875</string>
+    <string name="claude_monet">Claude Monet (1840-1926)</string>
+
 </resources>
