@@ -6,6 +6,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,14 +40,19 @@ import com.example.superheroes.ui.theme.SuperheroesTheme
 import org.w3c.dom.Text
 
 @Composable
-fun HeroesList(heroes: List<Hero>, modifier: Modifier = Modifier) {
+fun HeroesList(
+    heroes: List<Hero>,
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp)
+) {
 
     LazyColumn() {
         items(heroes) { hero ->
             HeroCard(
                 hero = hero,
                 modifier = Modifier
-                    .padding(horizontal = 16.dp, vertical = 8.dp))
+                    .padding(horizontal = 16.dp, vertical = 8.dp)
+            )
         }
     }
 }
@@ -55,12 +61,13 @@ fun HeroesList(heroes: List<Hero>, modifier: Modifier = Modifier) {
 fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
     Card(
         //elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-        modifier = modifier) {
+        modifier = modifier
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
-                //.sizeIn(minHeight = 72.dp)
+            //.sizeIn(minHeight = 72.dp)
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -95,7 +102,7 @@ fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
 @Composable
 fun HeroCardPreview() {
     SuperheroesTheme(darkTheme = false) {
-        Surface (
+        Surface(
             color = MaterialTheme.colorScheme.background
         ) {
             HeroCard(Hero(R.string.hero1, R.string.description1, R.drawable.android_superhero1))
@@ -107,7 +114,7 @@ fun HeroCardPreview() {
 @Composable
 fun HeroesPreview() {
     SuperheroesTheme(darkTheme = false) {
-        Surface (
+        Surface(
             color = MaterialTheme.colorScheme.background
         ) {
             HeroesList(heroes = HeroesDataSource.HeroesRepository.heroes)
