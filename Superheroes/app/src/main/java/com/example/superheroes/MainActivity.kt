@@ -26,6 +26,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SuperheroesTheme {
+                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -35,39 +36,47 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
 
-@Composable
-fun SuperheroesApp() {
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = {
-            TopAppBar()
+    /**
+     * Composable that displays an app bar and a list of heroes.
+     */
+    @Composable
+    fun SuperheroesApp() {
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            topBar = {
+                TopAppBar()
+            }
+        ) {
+            val heroes = HeroesDataSource.HeroesRepository.heroes
+            HeroesList(heroes = heroes, contentPadding = it)
         }
-    ) {
-        val heroes = HeroesDataSource.HeroesRepository.heroes
-        HeroesList(heroes = heroes, contentPadding = it)
     }
-}
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun TopAppBar(modifier: Modifier = Modifier) {
-    CenterAlignedTopAppBar(
-        title = {
-            Text(
-                text = stringResource(R.string.app_name),
-                style = MaterialTheme.typography.displayLarge
-            )
-        },
-        modifier = modifier
-    )
-}
+    /**
+     * Composable that displays a Top Bar with an icon and text.
+     *
+     * @param modifier modifiers to set to this composable
+     */
+    @OptIn(ExperimentalMaterial3Api::class)
+    @Composable
+    fun TopAppBar(modifier: Modifier = Modifier) {
+        CenterAlignedTopAppBar(
+            title = {
+                Text(
+                    text = stringResource(R.string.app_name),
+                    style = MaterialTheme.typography.displayLarge,
+                )
+            },
+            modifier = modifier
+        )
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun SuperHeroesPreview() {
-    SuperheroesTheme {
-        SuperheroesApp()
+    @Preview(showBackground = true)
+    @Composable
+    fun SuperHeroesPreview() {
+        SuperheroesTheme {
+            SuperheroesApp()
+        }
     }
 }
