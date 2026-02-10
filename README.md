@@ -56,6 +56,52 @@ The goal of this repository is to document my learning process, apply best pract
 
 ---
 
+## 📦 Unit 3 - Building Lists and Material Design
+
+In this unit I focused on:
+
+- Organizing projects using `data` and `model` packages
+- Working with lists and data sources
+- Implementing `LazyColumn` and `LazyVerticalGrid`
+- Applying Material 3 theming
+- Customizing colors, typography and shapes
+- Adding animations to composables
+- Using custom fonts
+- Creating reusable UI components
+
+### 📱 Projects
+
+- **Affirmations**
+  - First use of `data` and `model` packages
+  - Displaying a list from a data source
+  - Using images and string resources
+
+- **Courses**
+  - Implemented `LazyVerticalGrid`
+  - Used `dimens.xml` for consistent spacing
+  - Cards with images and text
+
+- **Woof**
+  - Custom MaterialTheme (colors, shapes, typography)
+  - TopAppBar implementation
+  - Expandable cards with animations
+
+- **Superheroes**
+  - Built from scratch
+  - Custom theme and typography (Cabin font)
+  - Hero list UI
+  - Top bar
+  - Animated list items
+ 
+ ### 🛠 Skills Acquired in Unit 3
+
+- Jetpack Compose list handling
+- State management in lists
+- Material 3 customization
+- UI animations in Compose
+- Resource organization (strings, dimens, fonts, images)
+- Clean project structure
+
 ## 🛠️ Technologies & Concepts
 - Kotlin
 - Jetpack Compose
