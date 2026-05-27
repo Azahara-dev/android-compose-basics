@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">30 Days of Movie</string>
+    <string name="movie1">Cadena perpetua</string>
+    <string name="description1">Andy Dufresne es encarcelado por matar a su esposa y al amante de esta.
+        Tras una dura adaptación, intenta mejorar las condiciones de la prisión y dar esperanza a sus compañeros.</string>
+    <string name="movie2">El padrino</string>
+    <string name="description2">El envejecido patriarca de una dinastía del crimen organizado en la ciudad de Nueva York
+        de la posguerra transfiere el control de su imperio clandestino a su reacio hijo menor.</string>
+    <string name="movie3">El caballero oscuro</string>
+    <string name="description3">Cuando la amenaza conocida como el Joker causa estragos y el caos en Gotham City, Batman
+        debe aceptar una de las mayores pruebas psicológicas y físicas para luchar contra la injusticia.</string>
+    <string name="movie4">El padrino parte II</string>
+    <string name="description4">Se describen los primeros años de vida y carrera de Vito Corleone en la ciudad de
+        Nueva York de la década de 1920, mientras que su hijo, Michael, expande y refuerza su control sobre el sindicato del crimen familiar.</string>
+    <string name="movie5">12 hombres sin piedad</string>
+    <string name="description5">Un miembro del jurado trata de evitar un error judicial obligando al resto
+        del jurado a reconsiderar las pruebas.</string>
+    <string name="movie6">El señor de los anillos: La comunidad del anillo</string>
+    <string name="description6">Un hobbit de la Comarca y ocho compañeros emprenden un viaje para destruir el
+        poderoso Anillo Único y salvar la Tierra Media del Señor Oscuro Sauron.</string>
+    <string name="movie7">La lista de Schindler</string>
+    <string name="description7">En la Polonia ocupada por los alemanes durante la Segunda Guerra Mundial, el
+        industrial Oskar Schindler se preocupa por sus trabajadores judíos tras presenciar su persecución por los nazis.</string>
+    <string name="movie8">El señor de los anillos: Las dos torres</string>
+    <string name="description8">Mientras Frodo y Sam se acercan a Mordor con la ayuda del astuto Gollum, la
+        comunidad dividida se enfrenta al nuevo aliado de Sauron, Saruman, y a sus hordas de Isengard.</string>
+    <string name="movie9">Pulp Fiction</string>
+    <string name="description9">Las vidas de dos mafiosos, un boxeador, la esposa de un gánster y un par de
+        bandidos se entrelazan en cuatro historias de violencia y redención.</string>
+    <string name="movie10">El bueno, el feo y el malo</string>
+    <string name="description10">Durante la guerra de Secesión, tres cazarrecompensas se lanzan a la búsqueda de un
+        tesoro que ninguno puede localizar sin la ayuda de los otros dos.</string>
+    <string name="movie11">El señor de los anillos: El retorno del rey</string>
+    <string name="description11">Gandalf y Aragorn lideran el mundo de los hombres contra la armada de Sauron
+        para distraer su atención de Frodo y Sam, quienes se aproximan al Monte del Destino con el Anillo Único.</string>
+    <string name="movie12">El club de la lucha</string>
+    <string name="description12">Un oficinista insomne y un fabricante de jabones forman un club de lucha clandestino
+        que se convierte en mucho más.</string>
+    <string name="movie13">Origen</string>
+    <string name="description13">A un ladrón que roba secretos corporativos a través del uso de la tecnología de
+        compartir sueños, se le da la tarea de implantar una idea en la mente de un jefe de una gran empresa.</string>
+    <string name="movie14">Matrix</string>
+    <string name="description14">Cuando una bella desconocida lleva al hacker Neo a un inframundo prohibido, descubre
+        la impactante verdad: la vida que conoce es un elaborado engaño de una ciberinteligencia malvada.</string>
+    <string name="movie15">Uno de los nuestros</string>
+    <string name="description15">La historia de Henry Hill y su vida en la mafia, abarcando su relación con su esposa
+        Karen Hill y sus socios mafiosos Jimmy Conway y Tommy DeVito en el sindicato del crimen italoamericano.</string>
 </resources>
