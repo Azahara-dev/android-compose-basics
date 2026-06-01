@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.a15daysofmovie"
+        applicationId = "com.example.a30daysofmovie"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
